@@ -1,6 +1,6 @@
 {% set name = "xtb" %}
 {% set pkg_name = "scine-" + name %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ pkg_name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://github.com/qcscine/xtb_wrapper/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 1c59ec80ed9424b1c81ab1fb2d9a137a6bd5309b00e0e2e1ed58732b5ba45af1
+    sha256: 68d815ebea1953ae9d360099044163ebf1c5da55dffeee1aca276f9b6525d293
     fn: {{ name }}.tar.gz
     patches:
       - pkgconfig.patch
@@ -18,7 +18,7 @@ source:
     folder: dev
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win or osx]
 
   run_exports:
