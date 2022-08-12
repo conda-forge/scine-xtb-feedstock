@@ -50,16 +50,20 @@ outputs:
       commands:
         - test -f $PREFIX/lib/{{ name }}.module${SHLIB_EXT}
 
+{% if linux and x86_64 %}
   - name: {{ pkg_name }}-python
     script: build_python.sh
+
+    build:
+      noarch: python
 
     requirements:
       host:
         - pip
-        - python
+        - python >=3.6
         - {{ pkg_name }} {{ version }}
       run:
-        - python
+        - python >=3.6
         - {{ pkg_name }} {{ version }}
         - scine-utilities-python
 
@@ -70,6 +74,7 @@ outputs:
         - pip
       commands:
         - pip check
+{% endif %}
 
 about:
   license: BSD-3-Clause
