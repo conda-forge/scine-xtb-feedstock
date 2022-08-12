@@ -50,6 +50,20 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/scine-xtb-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16071&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/scine-xtb-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16071&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/scine-xtb-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -64,6 +78,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-scine--xtb-green.svg)](https://anaconda.org/conda-forge/scine-xtb) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scine-xtb.svg)](https://anaconda.org/conda-forge/scine-xtb) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scine-xtb.svg)](https://anaconda.org/conda-forge/scine-xtb) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scine-xtb.svg)](https://anaconda.org/conda-forge/scine-xtb) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scine--xtb--python-green.svg)](https://anaconda.org/conda-forge/scine-xtb-python) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scine-xtb-python.svg)](https://anaconda.org/conda-forge/scine-xtb-python) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scine-xtb-python.svg)](https://anaconda.org/conda-forge/scine-xtb-python) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scine-xtb-python.svg)](https://anaconda.org/conda-forge/scine-xtb-python) |
 
 Installing scine-xtb
 ====================
@@ -75,16 +90,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `scine-xtb` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `scine-xtb, scine-xtb-python` can be installed with `conda`:
 
 ```
-conda install scine-xtb
+conda install scine-xtb scine-xtb-python
 ```
 
 or with `mamba`:
 
 ```
-mamba install scine-xtb
+mamba install scine-xtb scine-xtb-python
 ```
 
 It is possible to list all of the versions of `scine-xtb` available on your platform with `conda`:

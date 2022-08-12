@@ -1,0 +1,29 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8618a27..f293f9a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -14,7 +14,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/dev/cmake
+ 
+ # Find xtb
+ find_package(xtb QUIET)
+-if(NOT TARGET lib-xtb-static)
++if(TARGET lib-xtb-static)
++  add_library(xtb::xtb INTERFACE IMPORTED)
++  target_link_libraries(xtb::xtb INTERFACE lib-xtb-static)
++else()
+   find_package(PkgConfig REQUIRED)
+   pkg_check_modules(XTB QUIET xtb)
+   if(XTB_FOUND)
+diff --git a/src/Xtb/CMakeLists.txt b/src/Xtb/CMakeLists.txt
+index 76604eb..d9b4fd2 100644
+--- a/src/Xtb/CMakeLists.txt
++++ b/src/Xtb/CMakeLists.txt
+@@ -31,7 +31,7 @@ set_target_properties(Xtb PROPERTIES
+ target_link_libraries(Xtb
+   PRIVATE
+     Scine::UtilsOS
+-    lib-xtb-static
++    xtb::xtb
+     gfortran
+   PUBLIC
+     Scine::CoreHeaders

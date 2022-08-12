@@ -1,0 +1,12 @@
+diff --git a/src/Xtb/CMakeLists.txt b/src/Xtb/CMakeLists.txt
+index 76604eb..fd509fd 100644
+--- a/src/Xtb/CMakeLists.txt
++++ b/src/Xtb/CMakeLists.txt
+@@ -36,7 +36,6 @@ target_link_libraries(Xtb
+   PUBLIC
+     Scine::CoreHeaders
+ )
+-set_target_properties(Xtb PROPERTIES LINK_FLAGS "-Wl,--no-as-needed")
+ 
+ # Add namespaced aliases
+ add_library(Scine::Xtb ALIAS Xtb)
