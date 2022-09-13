@@ -19,7 +19,7 @@ source:
     folder: dev
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 outputs:
