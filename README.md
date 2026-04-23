@@ -1,11 +1,11 @@
-About scine-xtb
-===============
+About scine-xtb-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scine-xtb-feedstock/blob/main/LICENSE.txt)
 
 Home: https://scine.ethz.ch/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scine-xtb-feedstock/blob/main/LICENSE.txt)
 
 Summary: Wrapper around xtb to export it into the Scine tool chain.
 
